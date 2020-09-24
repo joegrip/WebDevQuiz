@@ -1,6 +1,6 @@
 {
-  "name": "idea-app",
-  "version": "0.0.1",
+  "name": "personality-quiz",
+  "version": "0.3.0",
   "description": "",
   "main": "index.html",
   "scripts": {
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/michaelwicks/proto-stack-starter-angularjs.git"
+    "url": "git+https://github.com/harrisjacob/WebDevQuiz.git"
   },
-  "author": "Michael Wicks",
+  "author": "Jacob Harris",
   "license": "UNLICENSED",
-  "private": "true",
+  "private": "false",
   "bugs": {
-    "url": "https://github.com/michaelwicks/proto-stack-starter-angularjs/issues"
+    "url": "https://github.com/harrisjacob/WebDevQuiz"
   },
-  "homepage": "https://github.com/michaelwicks/proto-stack-starter-angularjs#readme",
+  "homepage": "https://github.com/harrisjacob/WebDevQuiz",
   "dependencies": {
     "@fintechstudios/angularjs-mdc": "^0.5.2",
     "@material/card": "^0.38.0",

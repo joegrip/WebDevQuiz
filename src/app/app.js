@@ -7,7 +7,7 @@ const home = {
     bindings: {
         data: '<'
     },
-    templateUrl: './home/home.html',
+    templateUrl: './components/home/home.html',
     controller: 'HomeController'
 }
 
@@ -87,7 +87,7 @@ const result = {
     bindings: {
         answers: '<'
     },
-    templateUrl: './result/result.html',
+    templateUrl: './components/result/result.html',
     controller: 'ResultController'
 }
 
