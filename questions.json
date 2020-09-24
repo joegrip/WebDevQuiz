@@ -1,0 +1,21 @@
+{
+    "questions": [
+        {
+            "id": "0",
+            "prompt": "You are at the store and have the chance to buy dinner for the night. How many people are you buying for?",
+            "answers": ["0", "1", "2", "3"]
+        },
+
+        {
+            "id": "1",
+            "prompt": "Wow, that was a crazy night! How many drinks did you have?",
+            "answers": ["0", "1", "2", "3"]
+        }
+        ,
+        {
+            "id": "2",
+            "prompt": "How much money is in your bank account?",
+            "answers": ["$0", "$1", "$2", "$3"]
+        }
+    ]
+}

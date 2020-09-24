@@ -1,0 +1,60 @@
+.header {
+    font-size: 1.5em;
+    color: gold;
+    background-color: darkblue;
+    padding: 1em;
+    border: 0.4em solid grey;
+}
+
+.container {
+    background-color: lightblue;
+    border-left: 0.8em solid grey;
+    border-right: 0.8em solid grey;
+    border-bottom: 0.8em solid grey;
+
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 5em;
+
+}
+
+.selectStyle {
+    padding: 2em;
+    border-bottom: 0.25em solid grey;
+}
+
+.button {
+    background-color: goldenrod;
+    position: relative;
+    border: 0.1em solid black;
+    color: black;
+    padding: 1em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0.5em;
+}
+
+.results {
+    display: flex;
+    background-color: lightblue;
+    border-left: 0.8em solid grey;
+    border-right: 0.8em solid grey;
+    border-bottom: 0.8em solid grey;
+    position: relative;
+    top: -1.4em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 5em;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resultIMG {
+    width: 500px;
+    height: 400px;
+}
+
+.form_buttons{
+    display: flex;
+}

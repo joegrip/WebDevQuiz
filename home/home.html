@@ -1,0 +1,37 @@
+<div ng-show="!$ctrl.hide">
+    <div class="container">
+
+        <!--Make select for each question in JSON-->
+        <div ng-repeat="question in $ctrl.questions">
+            <br>
+            <!--Show select if the question is up -->
+            <div ng-show="$ctrl.showSelect(question.id)" class="selectStyle">
+                {{ question.prompt }}
+                <br>
+                <!--Submit answer on change of select and bind to model-->
+                <select ng-model="d.singleSelect" ng-change="$ctrl.record(question.id)">
+                    <!--Repeat answers from json-->
+                    <option ng-repeat=" ans in question.answers" value={{ans}}>{{ ans }}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form_buttons">
+            <!--Button goes back-->
+            <div ng-show="$ctrl.getPrev()">
+                <button class="button" ng-click="$ctrl.previous()" type="submit">Previous</button>
+            </div>
+            <!-- Submit button and get results -->
+            <div ng-show="$ctrl.getDone()">
+                <button class="button" ng-click="$ctrl.submit()" type="submit">Submit</button>
+            </div>
+
+        </div>
+        <br>
+        <br>
+    </div>
+
+    <br />
+    <br />
+
+    <br>
+</div>
