@@ -1,14 +1,14 @@
 {
-  "name": "personality-quiz",
+  "name": "app",
   "version": "0.3.0",
-  "description": "",
+  "description": "FEATURE 4",
   "main": "index.html",
   "scripts": {
     "start": "gulp production && node ./backend/index.js",
     "dev": "PORT=1337 node ./backend/index.js",
-    "test": "./node_modules/.bin/cypress run",
+    "test": "cypress run",
     "deploy": "gulp production",
-    "cypress:open": "./node_modules/.bin/cypress open"
+    "cypress:open": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -27,10 +27,13 @@
     "@uirouter/angularjs": "^1.0.22",
     "@uirouter/visualizer": "^4.0.0",
     "angular-parse": "^0.2.2",
+    "gulp": "^4.0.2",
     "moment": "^2.18.1",
     "ngVue": "^1.6.0",
+    "node-sass": "^4.14.1",
     "parse": "^1.11.1",
     "promise-limit": "^2.7.0",
+    "request": "^2.88.2",
     "vue": "^2.5.17"
   },
   "devDependencies": {
@@ -38,7 +41,6 @@
     "browser-sync": "^2.14.0",
     "cypress": "^3.0.2",
     "del": "^2.2.1",
-    "gulp": "^4.0.2",
     "gulp-angular-templatecache": "^2.0.0",
     "gulp-clean-css": "^2.0.6",
     "gulp-concat": "^2.6.0",
