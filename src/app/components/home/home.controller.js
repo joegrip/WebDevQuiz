@@ -1,20 +1,41 @@
-function HomeController(handleDataService,handleAnswersService,$scope){
+function HomeController(handleDataService,handleAnswersService,$scope,$rootScope){
     const $ctrl = this;
-	$ctrl.hide = 0; //Controls quiz area visibility
-    $ctrl.done = 0; //Determines if the submit button is visible
-    $ctrl.prev = 0; //Controls the visibility of the previous button
-    $ctrl.currentQuestion = 1; //Counter to control flow of previous button
-    $scope.d = {
-        singleSelect: null,
-        q: [0, 0, 0],
-        showS: [1, 0, 0] //question visibility
-    };
-    handleDataService.getQuestions().then(function (result) {
-        console.log(result);
-        $ctrl.questions = result.data.questions; //Use the handle service to obtain the list of questions
 
-    });
+    this.$onInit = function(){
+        $ctrl.hide = 0; //Controls quiz area visibility
+        $ctrl.done = 0; //Determines if the submit button is visible
+        $ctrl.prev = 0; //Controls the visibility of the previous button
+        $ctrl.currentQuestion = 1; //Counter to control flow of previous button
+        $scope.d = {
+            singleSelect: null,
+            q: [0, 0, 0],
+            showS: [1, 0, 0] //question visibility
+        };
+
+
+    };
+
+    handleDataService.getQuestions().then(function (result) {
+        $ctrl.questions = [
+            {
+                "id": "0",
+                "prompt": "You are at the store and have the chance to buy dinner for the night. How many people are you buying for?",
+                "answers": ["0", "1", "2", "3"]
+            },
     
+            {
+                "id": "1",
+                "prompt": "Wow, that was a crazy night! How many drinks did you have?",
+                "answers": ["0", "1", "2", "3"]
+            }
+            ,
+            {
+                "id": "2",
+                "prompt": "How much money is in your bank account?",
+                "answers": ["$0", "$1", "$2", "$3"]
+            }
+        ];//["q1","q2","q3"];//result.data.questions; //Use the handle service to obtain the list of questions
+    });    
     $ctrl.record = function (qID) {
         $scope.d.q[parseInt(qID, 10)] = $ctrl.questions[parseInt(qID, 10)].answers.indexOf($scope.d.singleSelect); //Record the user's answer in the q array
         if (parseInt(qID, 10) < 2) { //Restrict the question array from growing past questions

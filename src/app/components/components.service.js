@@ -63,6 +63,7 @@ function handleResultService($http){
             method: 'GET',
             url: './../../results.json'
         })
+
     }
     
 }
