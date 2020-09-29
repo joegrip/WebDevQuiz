@@ -1,6 +1,5 @@
-function HomeController(ExampleService){
-	const $ctrl = this;
-
+function HomeController(handleDataService,$scope){
+    const $ctrl = this;
 	$ctrl.hide = 0; //Controls quiz area visibility
     $ctrl.done = 0; //Determines if the submit button is visible
     $ctrl.prev = 0; //Controls the visibility of the previous button
@@ -63,4 +62,4 @@ function HomeController(ExampleService){
     };
 }
 
-angular.module('app').controller('HomeController', HomeController);
+angular.module('components.home').controller('HomeController', HomeController);
