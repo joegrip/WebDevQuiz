@@ -63,4 +63,6 @@ function HomeController(handleDataService,handleAnswersService,$scope){
     };
 }
 
-angular.module('components.home').controller('HomeController', HomeController);
+angular
+    .module('components.home')
+    .controller('HomeController', HomeController);

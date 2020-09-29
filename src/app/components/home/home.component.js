@@ -9,7 +9,8 @@ angular
 	.config(function ($stateProvider) {
 		$stateProvider
 			.state('home', {
-				url: '/',
-				component: 'home'
+				url: '/home',
+				component: 'home',
+				parent: 'app'
 			})
 	});
