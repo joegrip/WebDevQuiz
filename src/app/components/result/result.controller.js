@@ -1,8 +1,10 @@
 
 function ResultController($scope, $rootScope, handleAnswersService, handleResultService) {
-
     const $ctrl = this;
+
+    this.$onInit = function(){
     $ctrl.show = 0;
+    };
 
 
     $rootScope.$on("qDone", function (evt, arg) {

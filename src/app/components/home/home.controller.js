@@ -1,20 +1,23 @@
 function HomeController(handleDataService,handleAnswersService,$scope){
     const $ctrl = this;
-	$ctrl.hide = 0; //Controls quiz area visibility
-    $ctrl.done = 0; //Determines if the submit button is visible
-    $ctrl.prev = 0; //Controls the visibility of the previous button
-    $ctrl.currentQuestion = 1; //Counter to control flow of previous button
-    $scope.d = {
-        singleSelect: null,
-        q: [0, 0, 0],
-        showS: [1, 0, 0] //question visibility
-    };
-    handleDataService.getQuestions().then(function (result) {
-        console.log(result);
-        $ctrl.questions = result.data.questions; //Use the handle service to obtain the list of questions
 
-    });
-    
+    this.$onInit = function(){
+        $ctrl.hide = 0; //Controls quiz area visibility
+        $ctrl.done = 0; //Determines if the submit button is visible
+        $ctrl.prev = 0; //Controls the visibility of the previous button
+        $ctrl.currentQuestion = 1; //Counter to control flow of previous button
+        $scope.d = {
+            singleSelect: null,
+            q: [0, 0, 0],
+            showS: [1, 0, 0] //question visibility
+        };
+
+
+    };
+
+    handleDataService.getQuestions().then(function (result) {
+        $ctrl.questions = ["q1","q2","q3"];//result.data.questions; //Use the handle service to obtain the list of questions
+    });    
     $ctrl.record = function (qID) {
         $scope.d.q[parseInt(qID, 10)] = $ctrl.questions[parseInt(qID, 10)].answers.indexOf($scope.d.singleSelect); //Record the user's answer in the q array
         if (parseInt(qID, 10) < 2) { //Restrict the question array from growing past questions
