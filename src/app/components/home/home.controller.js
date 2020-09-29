@@ -1,4 +1,4 @@
-function HomeController(handleDataService,$scope){
+function HomeController(handleDataService,handleAnswersService,$scope){
     const $ctrl = this;
 	$ctrl.hide = 0; //Controls quiz area visibility
     $ctrl.done = 0; //Determines if the submit button is visible
@@ -10,6 +10,7 @@ function HomeController(handleDataService,$scope){
         showS: [1, 0, 0] //question visibility
     };
     handleDataService.getQuestions().then(function (result) {
+        console.log(result);
         $ctrl.questions = result.data.questions; //Use the handle service to obtain the list of questions
 
     });
