@@ -54,27 +54,22 @@ function handleAnswersService() {
 }
 angular.module('components').service('handleAnswersService', handleAnswersService);
 
-function handleResultService($http){
+function handleResultService(ResultModel){
     
     this.getResultOptions = getResultOptions;
     
     function getResultOptions(){
-        var ResultModel = Parse.Object.extend("Results");
-  
-         const query = new Parse.Query(ResultModel);
-        return query.find();
+        return ResultModel.getAll();
     }
     
 }
 angular.module('components').service('handleResultService', handleResultService);
 
-function handleQuestionService($http){
+function handleQuestionService(QuestionModel){
     this.getAllQuestions = getAllQuestions;
 
     function getAllQuestions(){
-        var QuestionModel = Parse.Object.extend("Questions");
-        const query = new Parse.Query(QuestionModel);
-        return query.find();
+        return QuestionModel.getAll();
     }
 }
 
