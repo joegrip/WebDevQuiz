@@ -63,14 +63,19 @@ function handleResultService($http){
   
          const query = new Parse.Query(ResultModel);
         return query.find();
-        /*
-        return $http({
-            method: 'GET',
-            url: './../../results.json'
-        })
-        */
-
     }
     
 }
 angular.module('components').service('handleResultService', handleResultService);
+
+function handleQuestionService($http){
+    this.getAllQuestions = getAllQuestions;
+
+    function getAllQuestions(){
+        var QuestionModel = Parse.Object.extend("Questions");
+        const query = new Parse.Query(QuestionModel);
+        return query.find();
+    }
+}
+
+angular.module('components').service('handleQuestionService', handleQuestionService);
