@@ -1,5 +1,5 @@
 
-function ResultController($scope, $rootScope, handleAnswersService, handleResultService) {
+function ResultController($scope, $rootScope, handleAnswersService, handleResultService,ResultModel,Parse){
     const $ctrl = this;
 
     this.$onInit = function(){
@@ -60,16 +60,18 @@ function ResultController($scope, $rootScope, handleAnswersService, handleResult
         });
     
         //Get the data that corresponds to the user's score
-        /*
+        
         handleResultService.getResultOptions().then(function (result){
-            $ctrl.resultMessage = result.data[$ctrl.score].message;
-            $ctrl.resultIMG = result.data[$ctrl.score].img;
+            var i;
+            for (i = 0; i < result.length; i++) {
+                if(result[i].attributes["resNum"] == $ctrl.score)
+                {
+                    $ctrl.resultMessage = result[i].attributes["message"]
+                }
+            }
+
         });
-        */
-    
-    $ctrl.resultMessage = $ctrl.results[$ctrl.score].message;
-    //$ctrl.resultIMG = $ctrl.results[$ctrl.score].img;
-    console.log($ctrl.show);
+        
     });
     
 }
