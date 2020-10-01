@@ -14,7 +14,6 @@ function HomeController(handleDataService,handleAnswersService,handleQuestionSer
     };
 
     handleQuestionService.getAllQuestions().then(function (result) {
-        console.log(result);
         $ctrl.questions = []
         //Parse Questions object
         var oneQuestion;
