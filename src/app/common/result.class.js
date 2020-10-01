@@ -3,6 +3,14 @@ class ResultModel {
         this.Parse = Parse;
         this.name = "Results";
     }
+
+    getAll()
+    {
+        var par = Parse.Object.extend(this.name);
+        const query = new Parse.Query(par);
+        return query.find();
+    }
+
 /*
         this.Parse = Parse;
         //this.ParseError = ParseError;

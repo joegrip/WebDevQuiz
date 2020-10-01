@@ -54,21 +54,14 @@ function handleAnswersService() {
 }
 angular.module('components').service('handleAnswersService', handleAnswersService);
 
-function handleResultService($http){
+function handleResultService(ResultModel){
     
     this.getResultOptions = getResultOptions;
     
     function getResultOptions(){
-        var ResultModel = Parse.Object.extend("Results");
-  
-         const query = new Parse.Query(ResultModel);
-        return query.find();
-        /*
-        return $http({
-            method: 'GET',
-            url: './../../results.json'
-        })
-        */
+
+        return ResultModel.getAll();
+   
 
     }
     
