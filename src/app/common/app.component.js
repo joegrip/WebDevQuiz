@@ -10,7 +10,7 @@ angular
 		$stateProvider
 			.state('app', {
 				redirectTo: 'home',
-				url: '/',
+				url: '',
 				component: 'app'
 			})
 	})
