@@ -54,12 +54,16 @@ function handleAnswersService() {
 }
 angular.module('components').service('handleAnswersService', handleAnswersService);
 
-function handleResultService(ResultModel){
+function handleResultService(ResultModel,MessageModel){
     
     this.getResultOptions = getResultOptions;
-    
+    this.getMsg = getMsg;
+
     function getResultOptions(){
         return ResultModel.getAll();
+    }
+    function getMsg(id){
+        return MessageModel.getMsg(id);
     }
     
 }
@@ -71,6 +75,8 @@ function handleQuestionService(QuestionModel){
     function getAllQuestions(){
         return QuestionModel.getAll();
     }
+
+  
 }
 
 angular.module('components').service('handleQuestionService', handleQuestionService);

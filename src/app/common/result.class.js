@@ -4,6 +4,7 @@ class ResultModel {
         this.name = "Results";
     }
 
+    //get all results
     getAll(){
         var par = Parse.Object.extend(this.name);
         const query = new Parse.Query(par);

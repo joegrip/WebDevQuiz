@@ -1,12 +1,12 @@
-class QuestionModel {
+class MessageModel {
     constructor(Parse){
         this.Parse = Parse;
-        this.name = "Questions";
+        this.name = "Message";
     }
 
 
-    //get all questions
-    getAll(){
+    //Get all messages
+    getMsg(id){
         var par = Parse.Object.extend(this.name);
         const query = new Parse.Query(par);
         return query.find();
@@ -15,4 +15,4 @@ class QuestionModel {
 
 angular
     .module('common')
-    .service('QuestionModel', QuestionModel);
+    .service('MessageModel', MessageModel);
