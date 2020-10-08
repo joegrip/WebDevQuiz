@@ -1,3 +1,49 @@
+.navContainer {
+    overflow: hidden;
+    background-color:#0C2340;
+    width: 100%;
+    float: left;
+    display: block;
+    color: #0C2340;
+    text-align: center;
+    text-decoration: none;
+    margin: 0;
+    margin-bottom: 2em;
+    border-bottom: solid;
+    border-color: #0C2340;
+    overflow: hidden;
+
+  }
+
+li a{
+    color: white;
+    text-decoration: none;
+}
+
+li{
+
+    margin: 1em;
+    margin-top: 0.75em;
+    padding: 1em;
+    border-style: solid;
+    border-color: black;
+    background-color: #C99700;
+    float: left;
+}
+
+li:hover{
+    border-color:#00843D;
+    background-color: #00843D
+
+
+}
+  ul {
+    list-style-type: none;
+
+}
+  
+
+
 .header {
     font-size: 1.5em;
     color: gold;

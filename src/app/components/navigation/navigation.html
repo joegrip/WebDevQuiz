@@ -1,8 +1,9 @@
 <div class="navigation">
-    <div class="container">
+    <div class="navContainer">
         <!--Make question for each class in JSON-->
         <ul>
-        <div ng-repeat="class in $ctrl.classes">
+            <li>Sakai</li>
+        <div class="navLink" ng-repeat="class in $ctrl.classes">
             <li><a href={{class.link}}>{{class.id}}</a></li>
         </div>
         </ul>
