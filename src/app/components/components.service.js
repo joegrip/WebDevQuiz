@@ -88,8 +88,6 @@ function handleClassService(ClassModel){
     this.getAllClasses = getAllClasses;
 
     function getAllClasses(){
-        console.log("calling get all cases");
-        console.log(ClassModel.getAll);
         return ClassModel.getAll();
     }
 

@@ -3,5 +3,6 @@ angular
 		'ui.router',
 		'components.home',
 		'components.result',
-		'components.navigation'
+		'components.navigation',
+		'components.courseMainView'
 	]);

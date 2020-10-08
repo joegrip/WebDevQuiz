@@ -9,7 +9,6 @@ function NavigationController(handleClassService,$scope,$rootScope){
             var oneClass;
             for(oneClass of result)
             {
-                console.log(oneClass);
                 var newClass = {
                     id: oneClass.attributes.idNum,
                     name: oneClass.attributes.name,
@@ -17,7 +16,6 @@ function NavigationController(handleClassService,$scope,$rootScope){
                 }
                 $ctrl.classes.push(newClass);
             }
-            console.log($ctrl.classes);
         });
     };
 
