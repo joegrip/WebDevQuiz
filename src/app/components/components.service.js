@@ -81,6 +81,9 @@ function handleQuestionService(QuestionModel){
 
 angular.module('components').service('handleQuestionService', handleQuestionService);
 
+
+
+
 function handleClassService(ClassModel){
     this.getAllClasses = getAllClasses;
 

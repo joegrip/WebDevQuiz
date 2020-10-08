@@ -6,6 +6,7 @@ class ResultModel {
 
     //get all results
     getAll(){
+        console.log("ResultModel");
         var par = Parse.Object.extend(this.name);
         const query = new Parse.Query(par);
         return query.find();
