@@ -1,6 +1,6 @@
 function init(ParseProvider){
-	var MY_PARSE_APP_ID = 'ewklS9YXnCAbt0wqoQNJ0IaN94mmelJq15d1b5nB';
-	var MY_PARSE_JS_KEY = 'reZlQlDiufI31pVGR3iZ0bRR6w8dANvfaPyPG21I';
+	var MY_PARSE_APP_ID = 'yXobu40RXBD0tp519dj8Kp5gBPhyGAhQC6fyauvQ';
+	var MY_PARSE_JS_KEY = 'oP0JBaUQKtX4bGpIg5ZEu6944MuCSL6Cwfx9uLFs';
 	ParseProvider.initialize(MY_PARSE_APP_ID, MY_PARSE_JS_KEY);
 	ParseProvider.serverURL = 'https://parseapi.back4app.com/';
 }

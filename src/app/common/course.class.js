@@ -1,7 +1,7 @@
-class ClassModel {
+class CourseModel {
     constructor(Parse){
         this.Parse = Parse;
-        this.name = 'Classes';
+        this.name = 'Course';
     }
 
     //get all classes
@@ -14,4 +14,4 @@ class ClassModel {
 
 angular
     .module('common')
-    .service('ClassModel', ClassModel);
+    .service('CourseModel', CourseModel);
