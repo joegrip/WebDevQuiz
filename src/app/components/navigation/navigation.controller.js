@@ -1,6 +1,10 @@
 function NavigationController(handleCourseService,$scope,$rootScope){
     const $ctrl = this;
+    $ctrl.updateCourse = updateCourse;
 
+    function updateCourse(CRN) {
+        $rootScope.$emit('courseClick', CRN);
+        }
     this.$onInit = function(){
         $ctrl.classes = [];
         handleCourseService.getAllCourses().then(function (result) {
@@ -16,6 +20,7 @@ function NavigationController(handleCourseService,$scope,$rootScope){
                 $ctrl.classes.push(newClass);
             }
         });
+
     };
 
 }
