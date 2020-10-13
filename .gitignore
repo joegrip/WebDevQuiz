@@ -53,3 +53,6 @@ templates.js
 /private
 Dockerfile
 nginx.conf
+
+#Prevent merge conflict after every server run
+index.html

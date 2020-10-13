@@ -84,16 +84,14 @@ angular.module('components').service('handleQuestionService', handleQuestionServ
 
 
 
-function handleClassService(ClassModel){
-    this.getAllClasses = getAllClasses;
+function handleCourseService(CourseModel){
+    this.getAllCourses= getAllCourses;
 
-    function getAllClasses(){
-        console.log("calling get all cases");
-        console.log(ClassModel.getAll);
-        return ClassModel.getAll();
+    function getAllCourses(){
+        return CourseModel.getAll();
     }
 
   
 }
 
-angular.module('components').service('handleClassService', handleClassService);
+angular.module('components').service('handleCourseService', handleCourseService);

@@ -9,7 +9,7 @@ angular
   .config(function ($stateProvider) {
 		$stateProvider
 			.state('app', {
-				redirectTo: 'home',
+				redirectTo: 'courseMainView',
 				url: '',
 				component: 'app'
 			})

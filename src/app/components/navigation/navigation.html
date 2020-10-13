@@ -4,7 +4,7 @@
         <ul>
             <li>Sakai</li>
         <div class="navLink" ng-repeat="class in $ctrl.classes">
-            <li><a href={{class.link}}>{{class.id}}</a></li>
+            <li><a ng-click="$ctrl.updateCourse(class.id)">{{class.title}}</a></li>
         </div>
         </ul>
         <br>
