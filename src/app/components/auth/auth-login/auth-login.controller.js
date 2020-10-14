@@ -1,15 +1,15 @@
-function LoginController(){
+function LoginController($rootScope){
 	const $ctrl = this;
 
-	$ctrl.$onInit = function(){
-		ctrl.user = {
+	this.$onInit = function(){
+		$ctrl.user = {
 			name: '',
 			email: '',
 			password: ''
 		}
 	}
 
-	$ctrl.loginUser = function(event){
+	this.loginUser = function(event){
 		
 	}
 }
