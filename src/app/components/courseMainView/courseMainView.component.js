@@ -10,11 +10,14 @@ var courseMainView = {
 angular
 	.module('components.courseMainView')
 	.component('courseMainView', courseMainView)
-	.config(function ($stateProvider) {
+	.config(function ($stateProvider ) {
 		$stateProvider
 			.state('courseMainView', {
-				url: '/courseMainView',
+				url: '/courseMainView/:CRN',
 				component: 'courseMainView',
-				parent: 'app'
+				parent: 'app',
+				params: {
+					CRN: '30023'
+				}
 			})
 	});
