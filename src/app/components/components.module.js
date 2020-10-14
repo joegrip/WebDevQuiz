@@ -4,5 +4,6 @@ angular
 		'components.home',
 		'components.result',
 		'components.navigation',
-		'components.courseMainView'
+		'components.courseMainView',
+		'components.auth'
 	]);
