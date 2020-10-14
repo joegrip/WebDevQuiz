@@ -109,3 +109,21 @@ li:hover{
 .form_buttons{
     display: flex;
 }
+
+.main-page{
+    display: flex;
+    flex-direction: column;
+}
+
+.course-MainView{
+    position: relative;
+}
+
+.course-sidebar {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+}
