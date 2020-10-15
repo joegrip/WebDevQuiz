@@ -19,7 +19,7 @@ function NavigationController(handleCourseService,$scope,$rootScope){
                     id: oneClass.attributes.CRN,
                     title: oneClass.attributes.Title,
                 }
-                //Add to classes array
+                //Add to classes array  
                 $ctrl.classes.push(newClass);
             }
         });
