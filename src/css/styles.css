@@ -1,7 +1,15 @@
 .classContainer{
-    border: solid;
+    border-top: solid;
+    border-color: beige;
     text-align: center;
+    position: relative;
+    left: 15%;
+    width: 85%;
+    background-color: beige;
+    height: 42em;
 }
+
+
 
 .navContainer {
     overflow: hidden;
@@ -13,9 +21,8 @@
     text-align: center;
     text-decoration: none;
     margin: 0;
-    margin-bottom: 2em;
     border-bottom: solid;
-    border-color: #0C2340;
+    border-color: beige;
     overflow: hidden;
 
   }
@@ -30,6 +37,7 @@ li{
     margin: 1em;
     margin-top: 0.75em;
     padding: 1em;
+    width: 7em;
     border-style: solid;
     border-color: black;
     background-color: #C99700;
@@ -38,7 +46,9 @@ li{
 
 li:hover{
     border-color:#00843D;
-    background-color: #00843D
+    background-color: #00843D;
+    cursor: pointer;
+
 
 
 }
@@ -54,6 +64,7 @@ li:hover{
     color: gold;
     background-color: darkblue;
     padding: 1em;
+    padding-bottom: 0px;
     border: 0.4em solid grey;
 }
 
@@ -67,38 +78,6 @@ li:hover{
     padding-right: 2em;
     padding-bottom: 5em;
 
-}
-
-.selectStyle {
-    padding: 2em;
-    border-bottom: 0.25em solid grey;
-}
-
-.button {
-    background-color: goldenrod;
-    position: relative;
-    border: 0.1em solid black;
-    color: black;
-    padding: 1em 1.5em;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 0.5em;
-}
-
-.results {
-    display: flex;
-    background-color: lightblue;
-    border-left: 0.8em solid grey;
-    border-right: 0.8em solid grey;
-    border-bottom: 0.8em solid grey;
-    position: relative;
-    top: -1.4em;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 5em;
-    flex-direction: column;
-    align-items: center;
 }
 
 .resultIMG {
@@ -120,10 +99,13 @@ li:hover{
 }
 
 .course-sidebar {
-  background-color: black;
+  background-color: #0C2340;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 250px;
+  width: 14.9%;
+  height: 42em;
+  border-right: solid;
+  border-color: #0C2340;
 }
