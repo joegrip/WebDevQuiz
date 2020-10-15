@@ -1,5 +1,5 @@
 
-## [0.4.0] (10/14/20)
+## [0.3.0] (10/14/20)
 
 ### New Features
 * **Authentication**: webpages are now protected and require a log in
