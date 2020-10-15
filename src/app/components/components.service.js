@@ -95,3 +95,21 @@ function handleCourseService(CourseModel){
 }
 
 angular.module('components').service('handleCourseService', handleCourseService);
+
+
+function currentCourseService(){
+    this.getCurrentCRN = getCurrentCRN;
+    this.setCurrentCRN = setCurrentCRN;
+    this.currentCRN = "30023";
+
+    function getCurrentCRN(){
+        return this.currentCRN;
+    }
+    function setCurrentCRN(updated){
+        this.currentCRN = updated;
+    }
+
+  
+}
+
+angular.module('components').service('currentCourseService', currentCourseService);
