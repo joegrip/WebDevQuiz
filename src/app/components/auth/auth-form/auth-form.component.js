@@ -1,6 +1,12 @@
 var authForm = {
 	templateUrl: "./auth-form.html",
-	controller: "AuthFormController" 
+	controller: "AuthFormController",
+	bindings: {
+		user: '<',
+		button: '@',
+		message: '@',
+		onSubmit: '&'
+	}
 };
 
 angular

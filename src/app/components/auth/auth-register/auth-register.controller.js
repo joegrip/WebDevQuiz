@@ -1,19 +1,29 @@
-function RegisterController($rootScope){
+function RegisterController(AuthService){
 	const $ctrl = this;
 
-	this.$onInit = function(){
+	$ctrl.$onInit = function(){
 		$ctrl.error = null;
 		$ctrl.user = {
 			name: '',
 			email: '',
 			password: ''
-		}
+		};
 
-	}
+	};
 
-	this.createUser = function(event){
-		
-	}
+	$ctrl.createUser = function(event){
+		return AuthService
+				.register(event.user)
+				.then(function (user) {
+					// success
+					$state.go(courseMainView);
+
+				}, function (reason) {
+					// error
+					$ctrl.error = reason.message;
+
+				});
+	};
 }
 
 angular
