@@ -1,8 +1,34 @@
-<form>
-	<input required type="email" name="email" ng-model="$ctrl.user.email"/>
-
-	<input ng-if="$ctrl.isRegister" required type="text" name="firstName" ng-model="$ctrl.user.firstName"/>
+<form name="authForm" novalidate ng-submit="$ctrl.submitForm();">
+	<label>
+		<input 	required="required" 
+				type="email" 
+				name="email" 
+				placeholder="Email" 
+				ng-model="$ctrl.user.email"/>	
+	</label>
+	<label ng-if="$ctrl.isRegister">
+		<input 	required="required"
+				type="text" 
+				name="firstName"
+				placeholder="Name"
+				ng-model="$ctrl.user.username"/>
+	</label>
+	<label>
+		<input 	required="required" 
+				type="password" 
+				name="password"
+				placeholder="Password" 
+				ng-model="$ctrl.user.password"/>	
+	</label>
+	<div class="auth-button">
+		<button ng-disabled="authForm.invalid" type="submit">
+			{{ $ctrl.button }}
+		</button>
+	</div>
+	<div ng-if="$ctrl.message">
+		{{ $ctrl.message }}
+	</div>
 	
-	<input required type="password" name="password" ng-model="$ctrl.user.password"/>
-
+		
+		
 </form>

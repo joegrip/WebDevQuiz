@@ -1,17 +1,28 @@
-function LoginController($rootScope){
+function LoginController($rootScope, AuthService){
 	const $ctrl = this;
 
-	this.$onInit = function(){
+	$ctrl.$onInit = function(){
+		$ctrl.error = null;
 		$ctrl.user = {
 			name: '',
 			email: '',
 			password: ''
-		}
-	}
+		};
 
-	this.loginUser = function(event){
-		
-	}
+	};
+
+	$ctrl.loginUser = function(event){
+		return AuthService
+				.login(event.user)
+				.then(function (user) {
+					// success
+					$state.go(courseMainView);
+				}, function (reason) {
+					// error
+					$ctrl.error = reason.message;
+				});
+	};
+
 }
 
 angular
