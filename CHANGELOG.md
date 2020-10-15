@@ -1,10 +1,13 @@
 
-## [0.4.0] (9/31/20)
+## [0.4.0] (10/14/20)
 
 ### New Features
-* **questions**: moved from local JSON object to Parse object
-* **results**: moved from local JSON object to Parse object
-* **Message**: new class added
+* **Authentication**: webpages are now protected and require a log in
+* **Navigation**: Added navigation bar to switch between classes
+* **Dynamic Routing**: Can navigate to classes with CRN in the URL
+* **Sidebar**: Added aesthetic sidebar that will have functionality added later
+* **Parse**: Refactored all Firebase logic to Parse 
+
 
 ### Contributors
 
