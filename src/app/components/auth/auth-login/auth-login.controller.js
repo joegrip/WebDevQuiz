@@ -1,4 +1,4 @@
-function LoginController($rootScope, AuthService){
+function LoginController($rootScope, AuthService, $state){
 	const $ctrl = this;
 
 	$ctrl.$onInit = function(){
@@ -16,7 +16,7 @@ function LoginController($rootScope, AuthService){
 				.login(event.user)
 				.then(function (user) {
 					// success
-					$state.go(courseMainView);
+					$state.go('app');
 				}, function (reason) {
 					// error
 					$ctrl.error = reason.message;

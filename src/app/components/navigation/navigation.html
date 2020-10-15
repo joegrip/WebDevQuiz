@@ -9,6 +9,12 @@
         </ul>
         <br>
         <br>
+    <div class="header__logout">
+        {{ ::$ctrl.user.email }}
+        <a href="" ng-click="$ctrl.onLogout();">
+            <span class="header__button">
+                Logout
+            </span>
     </div>
 
     <br />

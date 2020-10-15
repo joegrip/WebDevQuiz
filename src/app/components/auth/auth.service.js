@@ -7,6 +7,16 @@ function AuthService(Parse){
 		authData = response;
 		return authData;
 	}
+/*
+	function onSignIn(user){
+		authData = user;
+		return auth.currentAsync();
+	}
+*/
+	function clearAuthData() {
+		authData = null;
+	}
+
 
 	this.register = function (user) {
 		return auth.signUp(user.username, user.password, {email:user.email})
@@ -18,6 +28,35 @@ function AuthService(Parse){
 			.then(storeAuthData);
 	};
 
+	this.logout = function (){
+		return auth.logOut().then(storeAuthData);
+	};
+
+/*
+	this.requireAuthentication = function () {
+		return auth.currentAsync().then(storeAuthData);
+		//console.log("Here!");
+		
+		//auth.currentAsync();
+		//return auth
+		//	.logIn().then(onSignIn);
+
+
+			return auth.$waitForSignIn().then(function onSignIn(user){
+			authData=user;
+			return auth.$requireSignIn();
+		})
+	};
+*/
+	this.isAuthenticated = function () {
+		return !!(auth.current() && auth.current().authenticated());// null || {user}
+	};
+
+	this.getUser = function () {
+		if (authData){
+			return authData;
+		}
+	};
 }
 
 angular

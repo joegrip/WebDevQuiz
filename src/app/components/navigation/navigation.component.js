@@ -2,7 +2,9 @@ var navigation = {
 	templateUrl: "./navigation.html",
 	controller: "NavigationController",
 	bindings: {
-		routeName: "@"
+		routeName: "@",
+		user: '<',
+		onLogout: '&'
 	}
 };
 

@@ -11,6 +11,10 @@ angular
 			.state('app', {
 				redirectTo: 'courseMainView',
 				url: '',
+				component: 'app',
+				data: {
+					requiredAuth: true
+				},
 				component: 'app'
 			})
 	})
