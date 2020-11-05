@@ -13,11 +13,12 @@ angular
 	.config(function ($stateProvider ) {
 		$stateProvider
 			.state('courseMainView', {
-				url: '/courseMainView/:CRN',
+				url: '/courseMainView/:CRN/:subpage',
 				component: 'courseMainView',
 				parent: 'app',
 				params: {
-					CRN: '30023'
+					CRN: '30023',
+					subpage: ''
 				}
 			})
 	});

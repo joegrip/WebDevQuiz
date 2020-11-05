@@ -91,6 +91,10 @@ function handleCourseService(CourseModel){
         return CourseModel.getAll();
     }
 
+    function getSubpage(){
+
+    }
+
   
 }
 
@@ -100,7 +104,10 @@ angular.module('components').service('handleCourseService', handleCourseService)
 function currentCourseService(){
     this.getCurrentCRN = getCurrentCRN;
     this.setCurrentCRN = setCurrentCRN;
+    this.getSubPage = getSubPage;
+    this.setSubPage = setSubPage;
     this.currentCRN = "30023";
+    this.currentSubPage = "";
 
     function getCurrentCRN(){
         return this.currentCRN;
@@ -108,6 +115,15 @@ function currentCourseService(){
     function setCurrentCRN(updated){
         this.currentCRN = updated;
     }
+
+    function getSubPage(){
+        return this.currentSubPage;
+    }
+
+    function setSubPage(state){
+        this.currentSubPage = state;
+    }
+
 
   
 }

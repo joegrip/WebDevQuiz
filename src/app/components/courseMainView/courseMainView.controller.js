@@ -5,6 +5,8 @@ function CourseMainViewController(handleCourseService,currentCourseService,$scop
         //initialize variable to read data into
         $ctrl.classes = [];
         $ctrl.currentCRN = "";
+        $ctrl.currentSubPage = 'welcome';
+     
 
         //get all course data
         handleCourseService.getAllCourses().then(function (result) {
@@ -64,6 +66,7 @@ function CourseMainViewController(handleCourseService,currentCourseService,$scop
             {
                 return $ctrl.currentCRN;
             };
+
         });
 
     }
@@ -85,7 +88,7 @@ function CourseMainViewController(handleCourseService,currentCourseService,$scop
                     $ctrl.location = oneClass.attributes.Location;
                     $ctrl.title = oneClass.attributes.Title;
                     $ctrl.currentCRN = oneClass.attributes.CRN;
-                    $state.go('courseMainView',{'CRN': CRN});
+                    $state.go('courseMainView',{'CRN': CRN, 'subpage':'welcome'});
                  
                 }
             }
@@ -93,9 +96,12 @@ function CourseMainViewController(handleCourseService,currentCourseService,$scop
         });
     });
     
- 
 
-
+    $rootScope.$on('resourceClick', function(event, state){
+        currentCourseService.setSubPage(state);
+        console.log("subpage: "+ state);
+        $state.go('courseMainView', {'subpage':state});
+    });
 
 
 }   

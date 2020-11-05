@@ -1,12 +1,14 @@
 <div class="course-sidebar">
 	<div class="side-bar-Container">
-	<ul class="course-sidebar__list">
-		<li class="course-sidebar__item" ng-repeat="item in $ctrl.navOptions">
-			<a 
-				class="course-sidebar__link" ui_sref="{{item.state}}"
-				ui-sref-active-eq="course-sidebar__link--active">
-			{{ ::item.label }}
-		</li>
-	</ul>
+		<ul class="course-sidebar__list">
+			<li class="course-sidebar__item" ng-repeat="item in $ctrl.navOptions">
+				<a 
+					class="course-sidebar__link"
+					ui-sref-active-eq="course-sidebar__link--active"
+					ng-click="$ctrl.updateResource(item.state)">
+				{{ ::item.label }} </a>
+			</li>
+		</ul>
+		</div>
 	</div>
 </div>

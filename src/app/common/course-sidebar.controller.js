@@ -1,20 +1,26 @@
-function CourseSidebarController(){
-	var ctrl = this;
-	ctrl.navOptions = [{
+function CourseSidebarController($rootScope, $state, currentCourseService){
+	var $ctrl = this;
+	$ctrl.navOptions = [{
 		label: 'Welcome',
-		state: 'none'
+		state: 'welcome'
 	},{
 		label: 'Assignments',
 		state: 'assignments'
 	},{
 		label: 'Course Info',
-		state: 'info'
+		state: 'course_info'
 	},{
 		label: 'Gradebook',
-		state: 'grades'
+		state: 'gradebook'
 	}];
-}
 
+	$ctrl.updateResource = updateResource;
+
+	function updateResource(state){
+		$rootScope.$emit('resourceClick', state);
+	};
+
+}
 
 angular
 	.module('common')
