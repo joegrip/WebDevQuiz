@@ -1,15 +1,19 @@
 version: v1.0
-name: Initial Pipeline
+name: Test MyApp
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: 'Block #1'
+  - name: Test
     task:
       jobs:
-        - name: 'Job #1'
+        - name: Test
           commands:
             - checkout
-            - sudo pkill gulp
-            - sudo gulp
+            - sem-version node 12
+            - cache restore
+            - npm install
+            - cache store
+            - npm install -g gulp
+            - gulp
