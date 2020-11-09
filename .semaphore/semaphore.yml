@@ -11,4 +11,5 @@ blocks:
         - name: 'Job #1'
           commands:
             - checkout
-            - echo "end job"
+            - sudo pkill gulp
+            - sudo gulp
