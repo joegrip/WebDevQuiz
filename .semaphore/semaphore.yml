@@ -11,5 +11,5 @@ blocks:
         - name: 'Job #1'
           commands:
             - checkout
-            - echo "In yml: null
-            - echo ./test.sh
+            - '[object Object]'
+            - ./test.sh
