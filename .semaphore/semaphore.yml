@@ -18,4 +18,7 @@ blocks:
             - npm install
             - cache store
             - npm install -g gulp
+      epilogue:
+        on_pass:
+          commands:
             - gulp
