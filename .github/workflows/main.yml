@@ -32,8 +32,8 @@ jobs:
           super_secret: ${{ secrets.KEY }}
         run: |
           mkdir -p ~/.ssh/
-          echo "$KEY" > ~/.ssh/staging.key
-          cat ~/.ssh/staging.key
+          echo "$super_secret" > ~/.ssh/staging.key
+          echo ~/.ssh/staging.key
           chmod 600 ~/.ssh/staging.key
           cat >>~/.ssh/config <<END
           Host staging
